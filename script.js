@@ -34,6 +34,15 @@ function operate(num1, operator, num2) {
     }
 }
 
+function display(value) {
+    const display = document.querySelector('#display');
+    const total = document.querySelector('#total');
+    
+    total.textContent = displayValue;
+
+    display.appendChild(total);
+}
+
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
