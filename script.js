@@ -1,3 +1,6 @@
+let displayValue = '';
+let storedValues;
+
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -30,3 +33,20 @@ function operate(num1, operator, num2) {
             return divide(num1, num2);
     }
 }
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (button.value >= 0 && button.value <= 9) {
+            displayValue += button.value;
+            display(displayValue);
+        } else if (button.value == '/' || button.value == '*' || button.value == '+' || button.value == '-') {
+            displayValue += ` ${button.value} `;
+            display(displayValue);
+        } else if (button.value == '=') {
+            storedValues = displayValue.split(' ');
+            console.log(storedValues);
+        }
+    })
+})
