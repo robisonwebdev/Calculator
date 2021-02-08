@@ -34,6 +34,34 @@ function operate(num1, operator, num2) {
     }
 }
 
+function calculate() {
+    let newArrayValue;
+
+    while (storedValues.length != 1) {
+        if (storedValues.findIndex(element => element == '*') != -1) {
+            let arrayPos = storedValues.findIndex(element => element == '*');        
+             newArrayValue = operate(storedValues[arrayPos - 1], '*', storedValues[arrayPos + 1]);
+    
+            storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
+        } else if (storedValues.findIndex(element => element == '/') != -1) {
+            let arrayPos = storedValues.findIndex(element => element == '/');        
+            newArrayValue = operate(storedValues[arrayPos - 1], '/', storedValues[arrayPos + 1]);
+    
+            storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
+        } else if (storedValues.findIndex(element => element == '+') != -1) {
+            let arrayPos = storedValues.findIndex(element => element == '+');        
+            newArrayValue = operate(storedValues[arrayPos - 1], '+', storedValues[arrayPos + 1]);
+    
+            storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
+        } else if (storedValues.findIndex(element => element == '-') != -1) {
+            let arrayPos = storedValues.findIndex(element => element == '-');        
+            newArrayValue = operate(storedValues[arrayPos - 1], '-', storedValues[arrayPos + 1]);
+    
+            storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
+        }
+    }    
+}
+
 function display(value) {
     const display = document.querySelector('#display');
     const total = document.querySelector('#total');
