@@ -1,6 +1,7 @@
 let displayValue = '';
 let storedValues;
 
+// Math Operator Functions
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -21,6 +22,7 @@ function divide(num1, num2) {
     }
 }
 
+// Function to determine which math operator to call
 function operate(num1, operator, num2) {
     switch(operator) {
         case '+':
@@ -34,6 +36,7 @@ function operate(num1, operator, num2) {
     }
 }
 
+//Function to loop over storedValue array and calculate numbers until array.length = 1
 function calculate() {
     let newArrayValue;
 
@@ -64,6 +67,7 @@ function calculate() {
     display(storedValues[0]);
 }
 
+// Calculator Display
 function display(value) {
     const display = document.querySelector('#display');
     const total = document.querySelector('#total');
@@ -73,12 +77,14 @@ function display(value) {
     display.appendChild(total);
 }
 
+// Function to clear all values
 function clear() {
     displayValue = '';
     storedValues = [];
     display('');
 }
 
+// Main eventlisteners
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
