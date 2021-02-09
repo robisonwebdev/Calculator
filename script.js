@@ -73,6 +73,12 @@ function display(value) {
     display.appendChild(total);
 }
 
+function clear() {
+    displayValue = '';
+    storedValues = [];
+    display('');
+}
+
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
@@ -88,6 +94,8 @@ buttons.forEach((button) => {
             calculate();
             display(storedValues);
             displayValue = storedValues[0];
+        } else if (button.value == 'clear') {
+            clear();
         }
     })
 })
