@@ -44,22 +44,22 @@ function calculate() {
     while (storedValues.length != 1) {
         if (storedValues.findIndex(element => element == '*') != -1) {
             let arrayPos = storedValues.findIndex(element => element == '*');        
-            newArrayValue = operate(parseInt(storedValues[arrayPos - 1]), '*', parseInt(storedValues[arrayPos + 1]));
+            newArrayValue = operate(parseFloat(storedValues[arrayPos - 1]), '*', parseFloat(storedValues[arrayPos + 1]));
     
             storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
         } else if (storedValues.findIndex(element => element == '/') != -1) {
             let arrayPos = storedValues.findIndex(element => element == '/');        
-            newArrayValue = operate(parseInt(storedValues[arrayPos - 1]), '/', parseInt(storedValues[arrayPos + 1]));
+            newArrayValue = operate(parseFloat(storedValues[arrayPos - 1]), '/', parseFloat(storedValues[arrayPos + 1]));
     
             storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
         } else if (storedValues.findIndex(element => element == '+') != -1) {
             let arrayPos = storedValues.findIndex(element => element == '+');        
-            newArrayValue = operate(parseInt(storedValues[arrayPos - 1]), '+', parseInt(storedValues[arrayPos + 1]));
+            newArrayValue = operate(parseFloat(storedValues[arrayPos - 1]), '+', parseFloat(storedValues[arrayPos + 1]));
     
             storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
         } else if (storedValues.findIndex(element => element == '-') != -1) {
             let arrayPos = storedValues.findIndex(element => element == '-');        
-            newArrayValue = operate(parseInt(storedValues[arrayPos - 1]), '-', parseInt(storedValues[arrayPos + 1]));
+            newArrayValue = operate(parseFloat(storedValues[arrayPos - 1]), '-', parseFloat(storedValues[arrayPos + 1]));
     
             storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
         }
