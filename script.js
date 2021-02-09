@@ -121,28 +121,3 @@ equalBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', () => {
     clear();
 })
-
-// buttons.forEach((button) => {
-//     button.addEventListener('click', () => {
-//         if (button.value >= 0 && button.value <= 9) {
-//             displayValue += button.value;
-//             lastBtnClicked = button.value;
-//             display(displayValue);
-//         } else if (button.value == '/' || button.value == '*' || button.value == '+' || button.value == '-') {
-//             displayValue += ` ${button.value} `;
-//             lastBtnClicked = button.value;
-//             display(displayValue);
-//         } else if (button.value == '=') {
-//             if (lastBtnClicked == '/' || lastBtnClicked == '*' || lastBtnClicked == '+' || lastBtnClicked == '-') {
-//                 // Do Nothing
-//             } else {
-//                 storedValues = displayValue.split(' ');
-//                 calculate();
-//                 display(storedValues);
-//                 displayValue = storedValues[0];
-//             }
-//         } else if (button.value == 'clear') {
-//             clear();
-//         }
-//     })
-// })
