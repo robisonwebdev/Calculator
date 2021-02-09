@@ -40,7 +40,7 @@ function calculate() {
     while (storedValues.length != 1) {
         if (storedValues.findIndex(element => element == '*') != -1) {
             let arrayPos = storedValues.findIndex(element => element == '*');        
-             newArrayValue = operate(parseInt(storedValues[arrayPos - 1]), '*', parseInt(storedValues[arrayPos + 1]));
+            newArrayValue = operate(parseInt(storedValues[arrayPos - 1]), '*', parseInt(storedValues[arrayPos + 1]));
     
             storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
         } else if (storedValues.findIndex(element => element == '/') != -1) {
@@ -85,7 +85,9 @@ buttons.forEach((button) => {
             display(displayValue);
         } else if (button.value == '=') {
             storedValues = displayValue.split(' ');
-            console.log(storedValues);
+            calculate();
+            display(storedValues);
+            displayValue = storedValues[0];
         }
     })
 })
