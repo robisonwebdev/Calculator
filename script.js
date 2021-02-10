@@ -27,6 +27,10 @@ function plusNegative(num) {
     return (-1 * num);
 }
 
+function percentage(num) {
+    return (num/100);
+}
+
 // Function to determine which math operator to call
 function operate(num1, operator, num2) {
     switch(operator) {
