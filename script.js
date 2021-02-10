@@ -1,5 +1,5 @@
 let displayValue = '';
-let storedValues;
+let storedValues = [];
 let lastBtnClicked;
 
 // Math Operator Functions
@@ -90,19 +90,32 @@ const numBtns = document.querySelectorAll('.numBtns');
 const operatorBtns = document.querySelectorAll('.operatorBtns');
 const equalBtn = document.querySelector('#equalBtn');
 const clearBtn = document.querySelector('#clearBtn');
+let decimalClicked = false;
 
 numBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        displayValue += btn.value;
-        lastBtnClicked = btn.value;
-        display(displayValue);
+    btn.addEventListener('click', () => {     
+        if (btn.value == '.' && decimalClicked == true) {
+            // Do Nothing
+        } else if (btn.value == '.' && decimalClicked == false) {
+            displayValue += btn.value;
+            lastBtnClicked = btn.value;
+            decimalClicked = true;
+            display(displayValue);
+        } else {
+            displayValue += btn.value;
+            lastBtnClicked = btn.value;
+            display(displayValue);
+        }
+
     })
 })
 
 operatorBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
+        storedValues.push(displayValue);
         displayValue += ` ${btn.value} `;
         lastBtnClicked = btn.value;
+        decimalClicked = false;
         display(displayValue);
     })
 })
