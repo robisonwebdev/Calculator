@@ -17,10 +17,14 @@ function multiple(num1, num2) {
 
 function divide(num1, num2) {
     if (num2 === 0) {
-        return `Can't divide by 0`;
+        return (`Cant divide by zero!`);
     } else {
         return num1 / num2;
     }
+}
+
+function plusNegative(num) {
+    return (-1 * num);
 }
 
 // Function to determine which math operator to call
@@ -64,8 +68,6 @@ function calculate() {
             storedValues.splice(arrayPos - 1, 3, `${newArrayValue}`);
         }
     }
-
-    display(storedValues[0]);
 }
 
 // Calculator Display
