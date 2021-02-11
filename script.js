@@ -123,7 +123,7 @@ percentBtn.addEventListener('click', () => {
     let newDisplayValue;
 
     tempHold = percentage(tempHold);
-    newDisplayValue = displayValue.replace(storeCurrent, tempHold);
+    newDisplayValue = displayValue.replace(storeCurrent, tempHold);     // Works, but not perfect
     storeCurrent = tempHold;
     displayValue = newDisplayValue;
     display(displayValue);
