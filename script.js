@@ -97,6 +97,7 @@ const numBtns = document.querySelectorAll('.numBtns');
 const operatorBtns = document.querySelectorAll('.operatorBtns');
 const equalBtn = document.querySelector('#equalBtn');
 const clearBtn = document.querySelector('#clearBtn');
+const percentBtn = document.querySelector('#percentBtn');
 let decimalClicked = false;
 
 numBtns.forEach((btn) => {
@@ -115,6 +116,17 @@ operatorBtns.forEach((btn) => {
         displayValue += btn.value;
         display(displayValue);
     })
+})
+
+percentBtn.addEventListener('click', () => {
+    let tempHold = storeCurrent;
+    let newDisplayValue;
+
+    tempHold = percentage(tempHold);
+    newDisplayValue = displayValue.replace(storeCurrent, tempHold);
+    storeCurrent = tempHold;
+    displayValue = newDisplayValue;
+    display(displayValue);
 })
 
 equalBtn.addEventListener('click', () => {
