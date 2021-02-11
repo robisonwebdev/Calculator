@@ -1,6 +1,6 @@
 let displayValue = '';
+let storeCurrent = '';
 let storedValues = [];
-let lastBtnClicked;
 
 // Math Operator Functions
 function add(num1, num2) {
@@ -87,6 +87,7 @@ function display(value) {
 // Function to clear all values
 function clear() {
     displayValue = '';
+    storeCurrent = '';
     storedValues = [];
     display('');
 }
@@ -99,41 +100,35 @@ const clearBtn = document.querySelector('#clearBtn');
 let decimalClicked = false;
 
 numBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {     
-        if (btn.value == '.' && decimalClicked == true) {
-            // Do Nothing
-        } else if (btn.value == '.' && decimalClicked == false) {
-            displayValue += btn.value;
-            lastBtnClicked = btn.value;
-            decimalClicked = true;
-            display(displayValue);
-        } else {
-            displayValue += btn.value;
-            lastBtnClicked = btn.value;
-            display(displayValue);
-        }
-
+    btn.addEventListener('click', () => {
+        displayValue += btn.value;
+        storeCurrent += btn.value;
+        display(displayValue);
     })
 })
 
 operatorBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        storedValues.push(displayValue);
-        displayValue += ` ${btn.value} `;
-        lastBtnClicked = btn.value;
-        decimalClicked = false;
+        storedValues.push(storeCurrent);
+        storedValues.push(btn.value);
+        storeCurrent = '';
+        displayValue += btn.value;
         display(displayValue);
     })
 })
 
 equalBtn.addEventListener('click', () => {
-    if (lastBtnClicked == '/' || lastBtnClicked == '*' || lastBtnClicked == '+' || lastBtnClicked == '-') {
-        // Do Nothing
-    } else {
-        storedValues = displayValue.split(' ');
-        calculate();
-        display(storedValues);
-        displayValue = storedValues[0];
+    if (storeCurrent != '') {
+        storedValues.push(storeCurrent);
+        storeCurrent = '';
+
+        if (storedValues.length  % 2 == 1) {
+            calculate();
+            display(storedValues);
+            displayValue = storedValues[0];
+            storeCurrent = storedValues[0];
+            storedValues = [];
+        }
     }
 })
 
