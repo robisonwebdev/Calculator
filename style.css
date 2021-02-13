@@ -32,9 +32,12 @@ body {
     align-items: center;
 
     border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 60vh;
     margin: 5vh 0;
     width: 95vw;
+    z-index: 10;
 }
 
 #display {
@@ -61,6 +64,7 @@ body {
 
     /* border: 1px solid red; Remove Later */
 
+    
     height: 100%;
     width: 100%;
 }
