@@ -52,6 +52,7 @@ body {
     border-top-right-radius: 10px;
     font-size: 25px;
     height: 25vh;
+    overflow: hidden;
     width: 100%;
 }
 
