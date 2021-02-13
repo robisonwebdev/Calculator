@@ -8,6 +8,7 @@
     --Yellow: #ffcc29;
     --Purple: #6930c3;
     --White: #f4f9f9;
+    --Grey: #333538;
 }
 
 body {
@@ -64,7 +65,6 @@ body {
 
     /* border: 1px solid red; Remove Later */
 
-    
     height: 100%;
     width: 100%;
 }
@@ -126,4 +126,17 @@ body {
 #equalBtn {
     background-color: var(--Yellow);
     color: var(--Black);
+}
+
+/* Number Pad Borders */
+#row1, #row2, #row3, #row4 {
+    border-top: 1px solid var(--Grey);
+}
+
+.borderRight {
+    border-right: 1px solid var(--Grey);
+}
+
+.borderBottom {
+    border-bottom: 1px solid var(--Grey);
 }
