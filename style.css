@@ -11,7 +11,7 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     height: 100%;
@@ -24,7 +24,8 @@ body {
     justify-content: start;
     align-items: center;
 
-    height: 90vh;
+    border: 2px solid black;
+    height: 60vh;
     margin: 5vh 0;
     width: 95vw;
 }
@@ -34,7 +35,7 @@ body {
     justify-content: end;
     align-items: flex-end;
 
-    border: 1px solid blue; /* Remove Later */
+    border-bottom: 2px solid black; 
 
     font-size: 25px;
     height: 25vh;
@@ -51,7 +52,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    border: 1px solid red; /* Remove Later */
+    /* border: 1px solid red; Remove Later */
 
     height: 100%;
     width: 100%;
