@@ -71,6 +71,7 @@ body {
     justify-content: center;
     align-items: center;
 
+    background-color: var(--Black);
     height: 100%;
     width: 75%;
 }
@@ -104,13 +105,21 @@ body {
 .btns {
     background: none;
     border: none;
-    border-radius: 100%;
+    color: var(--White);
     font-size: 18px;
     height: 100%;
     width: 24vw;
 }
 
 .btns:hover {
-    border: 1px solid green;
-    border-radius: 100%;
+
+}
+
+.operatorBtns {
+    background-color: var(--Purple);
+}
+
+#equalBtn {
+    background-color: var(--Yellow);
+    color: var(--Black);
 }
