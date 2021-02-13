@@ -94,6 +94,7 @@ function clear() {
 
 // Main eventlisteners
 const numBtns = document.querySelectorAll('.numBtns');
+const decimalBtn = document.querySelector('#decimalBtn');
 const operatorBtns = document.querySelectorAll('.operatorBtns');
 const equalBtn = document.querySelector('#equalBtn');
 const clearBtn = document.querySelector('#clearBtn');
@@ -107,6 +108,10 @@ numBtns.forEach((btn) => {
         storeCurrent += btn.value;
         display(displayValue);
     })
+})
+
+decimalBtn.addEventListener('click', () => {
+    
 })
 
 operatorBtns.forEach((btn) => {
