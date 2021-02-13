@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+:root {
+    --Black: #222831;
+    --Yellow: #ffcc29;
+    --Purple: #6930c3;
+    --White: #f4f9f9;
+}
+
 body {
     height: 100vh;
     width: 100vw;
