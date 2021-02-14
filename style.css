@@ -13,7 +13,7 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 #container {
@@ -37,7 +37,7 @@ body {
     border-top-right-radius: 10px;
     height: 60vh;
     margin: 5vh 0;
-    width: 95vw;
+    width: 95%;
     z-index: 10;
 }
 
@@ -88,7 +88,7 @@ body {
     flex-direction: column;
 
     height: 100%;
-    width: 25vw;
+    width: 25%;
 }
 
 #topControls, #row1, #row2, #row3, #row4 {
@@ -115,7 +115,7 @@ body {
     color: var(--White);
     font-size: 18px;
     height: 100%;
-    width: 24vw;
+    width: 100%;
 }
 
 .btns:hover {
@@ -142,4 +142,17 @@ body {
 
 .borderBottom {
     border-bottom: 1px solid var(--Grey);
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container {
+        width: 350px;
+    }
 }
