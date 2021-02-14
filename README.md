@@ -1,5 +1,9 @@
 # Calculator - [Live Preview](https://robisonwebdev.github.io/Calculator/)
 
+## Objective of Calculator Project
+I am to make an on-screen calculator using JavaScript, HTML, and CSS. I attempted to figure out solutions, to construct expressions without using
+built-in functions (like eval()) to do the work for me. 
+
 ## Features to add
 - Setup backspace button.
 - Add keyboard support.
