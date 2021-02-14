@@ -58,7 +58,7 @@ body {
     align-items: flex-end;
 
     background-color: var(--White);
-    border-bottom: 2px solid var(--Black);
+    border-bottom: 3px solid var(--Black);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 25px;
