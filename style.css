@@ -129,10 +129,6 @@ body {
     width: 100%;
 }
 
-.btns:hover {
-
-}
-
 .operatorBtns {
     background-color: var(--Purple);
 }
@@ -156,10 +152,6 @@ body {
 }
 
 @media only screen and (min-width: 450px) {
-    body {
-
-    }
-
     #container {
         width: 450px;
     }
