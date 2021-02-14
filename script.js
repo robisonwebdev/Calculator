@@ -100,6 +100,7 @@ const equalBtn = document.querySelector('#equalBtn');
 const clearBtn = document.querySelector('#clearBtn');
 const percentBtn = document.querySelector('#percentBtn');
 const plusNegativeBtn = document.querySelector('#plusNegativeBtn');
+const backspaceBtn = document.querySelector('#backspaceBtn');
 let decimalClicked = false;
 
 numBtns.forEach((btn) => {
@@ -111,6 +112,10 @@ numBtns.forEach((btn) => {
 })
 
 decimalBtn.addEventListener('click', () => {
+    
+})
+
+backspaceBtn.addEventListener('click', () => {
     
 })
 
