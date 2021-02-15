@@ -103,6 +103,35 @@ const plusNegativeBtn = document.querySelector('#plusNegativeBtn');
 const backspaceBtn = document.querySelector('#backspaceBtn');
 let decimalClicked = false;
 
+const keyboardInput = document.querySelector('body');
+
+keyboardInput.addEventListener('keypress', (e) => {
+    if (e.key >= 0 || e.key <= 9) {
+        displayValue += e.key;
+        storeCurrent += e.key;
+        display(displayValue);
+    } else if (e.key == '+' || e.key == '-' || e.key == '*' || e.key == '/') {
+        storedValues.push(storeCurrent);
+        storedValues.push(e.key);
+        storeCurrent = '';
+        displayValue += e.key;
+        display(displayValue);
+    } else if (e.key == '=' || e.key == 'Enter') {
+        if (storeCurrent != '') {
+            storedValues.push(storeCurrent);
+            storeCurrent = '';
+    
+            if (storedValues.length  % 2 == 1) {
+                calculate();
+                display(storedValues);
+                displayValue = storedValues[0];
+                storeCurrent = storedValues[0];
+                storedValues = [];
+            }
+        }
+    }
+})
+
 numBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         displayValue += btn.value;
