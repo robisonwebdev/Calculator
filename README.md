@@ -6,7 +6,7 @@ built-in functions (like eval()) to do the work for me.
 
 ## Features to add
 - Setup backspace button.
-- Add keyboard support.
+- Add keyboard support for Clear, Backspace, Percent, and Decimal.
 - Add hover/click effects for buttons
 
 ## Issues to fix
