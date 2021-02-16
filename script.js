@@ -121,13 +121,15 @@ backspaceBtn.addEventListener('click', () => {
 
 operatorBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        storedValues.push(storeCurrent);
-        storedValues.push(btn.value);
-        storeCurrent = '';
-        displayValue += btn.value;
-        display(displayValue);
-
-        decimalBtn.disabled = false;
+        if (storeCurrent.length > 0) {
+            storedValues.push(storeCurrent);
+            storedValues.push(btn.value);
+            storeCurrent = '';
+            displayValue += btn.value;
+            display(displayValue);
+    
+            decimalBtn.disabled = false;
+        }
     })
 })
 
