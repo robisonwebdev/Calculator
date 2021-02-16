@@ -102,19 +102,17 @@ const percentBtn = document.querySelector('#percentBtn');
 const plusNegativeBtn = document.querySelector('#plusNegativeBtn');
 const backspaceBtn = document.querySelector('#backspaceBtn');
 const keyboardInput = document.querySelector('body');
-let decimalClicked = false;
-
 
 numBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         displayValue += btn.value;
         storeCurrent += btn.value;
         display(displayValue);
-    })
-})
 
-decimalBtn.addEventListener('click', () => {
-    
+        if (btn.value == '.') {
+            decimalBtn.disabled = true;
+        }
+    })
 })
 
 backspaceBtn.addEventListener('click', () => {
@@ -128,6 +126,8 @@ operatorBtns.forEach((btn) => {
         storeCurrent = '';
         displayValue += btn.value;
         display(displayValue);
+
+        decimalBtn.disabled = false;
     })
 })
 
