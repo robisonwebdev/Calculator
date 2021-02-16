@@ -90,6 +90,7 @@ function clear() {
     storeCurrent = '';
     storedValues = [];
     display('');
+    decimalBtn.disabled = false;
 }
 
 // Main eventlisteners
